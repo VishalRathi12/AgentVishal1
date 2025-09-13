@@ -1,0 +1,15 @@
+trigger:
+- main   # or the branch you are using
+
+pool:
+  name: 'vishal agent pool'   # ✅ use the same pool you selected while registering the agent
+
+jobs:
+- job: create_folder
+  displayName: "Create Folder file1"
+  steps:
+  - script: |
+      mkdir -p "$HOME/Documents/file1"
+      echo "Created folder: $HOME/Documents/file1"
+      ls -ld "$HOME/Documents/file1"
+    displayName: "Run mkdir in Documents folder"
