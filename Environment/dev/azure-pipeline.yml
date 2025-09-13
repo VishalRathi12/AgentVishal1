@@ -1,5 +1,5 @@
 trigger:
-- main   # or whichever branch you want
+- main
 
 pool:
   name: 'vishal agent pool'
@@ -7,7 +7,7 @@ pool:
 jobs:
 - deployment: DeployToMac
   displayName: "Deploy Job to Mac"
-  environment: "Dev"  # ✅ must match the name you created in UI
+  environment: "Dev"  # must match the name of your environment
   strategy:
     runOnce:
       deploy:
@@ -16,4 +16,4 @@ jobs:
             echo "Running inside Environment: Dev"
             mkdir -p "$HOME/Documents/file1"
             echo "Created folder inside environment pipeline."
-        displayName: "Create folder in environment"
+          displayName: "Create folder in environment"
