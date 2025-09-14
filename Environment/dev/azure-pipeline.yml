@@ -13,7 +13,7 @@ jobs:
       deploy:
         steps:
         - script: |
-            echo "Running inside Environment: Dev"
-            mkdir -p "$HOME/Documents/file1"
-            echo "Created folder inside environment pipeline."
+            echo "Message: $(myMessage)"
+            mkdir -p "$HOME/Documents/$(myFolder)"
+            echo "Created folder: $(myFolder)"
           displayName: "Create folder in environment"
