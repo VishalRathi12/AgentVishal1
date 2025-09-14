@@ -7,7 +7,7 @@ pool:
 jobs:
 - deployment: DeployToMac
   displayName: "Deploy Job to Mac"
-  environment: "Dev"  # must match the name of your environment
+  environment: "QA"  # must match the name of your environment
   strategy:
     runOnce:
       deploy:
